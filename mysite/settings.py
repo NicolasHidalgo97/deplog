@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 
     'paginas',
     'Bitacoras',
+    'Encomiendas',
 ]
 
 MIDDLEWARE = [
