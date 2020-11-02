@@ -43,8 +43,7 @@ INSTALLED_APPS = [
     #Aplicaciones propias
 
     'paginas',
-    'Bitacoras',
-    'Encomiendas',
+    'Conserje',
 ]
 
 MIDDLEWARE = [
