@@ -16,8 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from paginas.views import home_view
+from Conserje.views import crear_bitacora_vista,crear_encomienda_vista
 
 urlpatterns = [
     path('admin/', admin.site.urls),    
     path('', home_view),
+    path('bitacora/', crear_bitacora_vista),
+    path('encomienda/', crear_encomienda_vista),
 ]

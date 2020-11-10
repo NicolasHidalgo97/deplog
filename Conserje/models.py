@@ -6,12 +6,13 @@ class bitacora(models.Model):
     Departamento = models.IntegerField()
     Fecha        = models.DateField()
     Hora         = models.TimeField()
-    Información  = models.TextField()
+    Sumario      = models.TextField()
 
 class encomienda(models.Model):
     Nombre                = models.CharField(max_length=120) 
     Departamento          = models.IntegerField()
     Fecha                 = models.DateField()
     Hora                  = models.TimeField()
-    Información           = models.TextField()
+    Sumario               = models.TextField()
+    Recibido              = models.BooleanField(default=False)
     Entregado             = models.BooleanField(default=False)
