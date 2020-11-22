@@ -24,6 +24,7 @@ class BitacoraForm(forms.ModelForm):
                                 }
                                 ),
                             )
+    
     class Meta:
         model  = bitacora
         fields = [

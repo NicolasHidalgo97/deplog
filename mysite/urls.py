@@ -16,11 +16,31 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from paginas.views import home_view
-from Conserje.views import crear_bitacora_vista,crear_encomienda_vista
+from Conserje.views import (crear_bitacora_vista,
+                            crear_encomienda_vista,
+                            detalles_bitacora_vista,
+                            detalles_encomienda_vista,
+                            editar_bitacora_vista,
+                            editar_encomienda_vista,
+                            borrar_bitacora_vista,
+                            borrar_encomienda_vista,
+                            lista_bitacora_vista,
+                            lista_encomienda_vista,
+                            )
 
 urlpatterns = [
     path('admin/', admin.site.urls),    
     path('', home_view),
+
     path('bitacora/', crear_bitacora_vista),
+    path('bitacora/<int:id>/detalles/',detalles_bitacora_vista,name='detalles-bitacora'),
+    path('bitacora/<int:id>/editar/',editar_bitacora_vista),
+    path('bitacora/<int:id>/borrar/',borrar_bitacora_vista),
+    path('bitacora/lista/',lista_bitacora_vista,name='lista-bitacora'),   
+
     path('encomienda/', crear_encomienda_vista),
+    path('encomienda/<int:id>/detalles/',detalles_encomienda_vista,name='detalles-encomienda'),
+    path('encomienda/<int:id>/editar/',editar_encomienda_vista),
+    path('encomienda/<int:id>/borrar/',borrar_encomienda_vista),
+    path('encomienda/lista/',lista_encomienda_vista,name='lista-encomienda'),
 ]
