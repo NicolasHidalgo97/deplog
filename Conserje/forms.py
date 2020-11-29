@@ -5,13 +5,10 @@ from .models import encomienda
 
 
 class BitacoraForm(forms.ModelForm):
-    Nombre       = forms.CharField(
-        widget = forms.TextInput(attrs={"placeholder":"Nombre empleado"})
-        
-        )
-    Departamento = forms.IntegerField()
-    Fecha        = forms.DateField()
-    Hora         = forms.TimeField()
+    Nombre       = forms.CharField(widget = forms.TextInput(attrs={"placeholder":"Nombre empleado"}))
+    Departamento = forms.IntegerField(widget=forms.TextInput(attrs={"placeholder":"N° Departamento"}))
+    Fecha        = forms.DateField(widget=forms.DateInput(attrs={"placeholder":"YYYY-MM-DD"}))
+    Hora         = forms.TimeField(widget=forms.TimeInput(attrs={"placeholder":"HH:MM"}))
     Sumario      = forms.CharField(
                             required=False,
                             widget=forms.Textarea(
@@ -33,16 +30,13 @@ class BitacoraForm(forms.ModelForm):
             'Fecha',
             'Hora',
             'Sumario'
-        ]
+        ]  
 
 class EncomiendaForm(forms.ModelForm):
-    Nombre       = forms.CharField(
-        widget = forms.TextInput(attrs={"placeholder":"Nombre empleado"})
-        
-        )
-    Departamento = forms.IntegerField()
-    Fecha        = forms.DateField()
-    Hora         = forms.TimeField()
+    Nombre       = forms.CharField(widget=forms.TextInput(attrs={"placeholder":"Nombre empleado"}))
+    Departamento = forms.IntegerField(widget=forms.TextInput(attrs={"placeholder":"N° Departamento"}))
+    Fecha        = forms.DateField(widget=forms.DateInput(attrs={"placeholder":"YYYY-MM-DD"}))
+    Hora         = forms.TimeField(widget=forms.TimeInput(attrs={"placeholder":"HH:MM"}))
     Sumario      = forms.CharField(
                             required=False,
                             widget=forms.Textarea(

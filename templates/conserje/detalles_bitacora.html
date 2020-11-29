@@ -1,9 +1,13 @@
+{% extends 'botones.html' %}
 {% block content %}
 <title>Detalles</title>
 <p>Nombre empleado    : {{ object.Nombre }}</p>
 <p>Numero Departamento : {{ object.Departamento }}</p>
 <p>Fecha               : {{ object.Fecha }}</p>
 <p>Hora                : {{ object.Hora }}</p>
-<p>Sumario             : {{ object.Sumario }}</p>
+<p>Sumario             : {{ object.Sumario }}</p><br>
+
+<a href='../editar/'> Editar bitacora </a> <br>
+<a href='../borrar/'> Borrar bitacora </a> <br>
 
 {% endblock %}

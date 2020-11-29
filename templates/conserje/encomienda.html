@@ -1,6 +1,23 @@
+{% extends 'botones.html' %}
 {% block content %}
-<form action='.' method='POST'>{% csrf_token %}
-    {{ form.as_p}}
-    <input type='submit' value='guardar'/>
+<form action='.' method='POST' aling>{% csrf_token %}
+    {% for field in form %}
+    
+    {% if field.name == 'Recibido' or field.name == 'Entregado' %}
+        <div>
+            {{ field.errors }}<br>
+            {{ field.name }} :
+            {{ field }}
+        </div>
+    {% else %}
+        <div>
+            {{ field.errors }}
+            {{ field.name }} :<br>
+            {{ field }}
+        </div>
+    {% endif %}
+    {% endfor %}
+    <br>
+    <input type='submit' value='Guardar'/>
 </form>
 {% endblock %}

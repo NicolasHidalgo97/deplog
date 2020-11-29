@@ -1,3 +1,4 @@
+{% extends 'botones.html' %}
 {% block content %}
 <title>Detalles</title>
 <p>Nombre Empleado : {{ object.Nombre }}</p>
@@ -6,6 +7,8 @@
 <p>Hora : {{ object.Hora }}</p>
 <p>Sumario : {{ object.Sumario }}</p>
 <p>Recibido : {{ object.Recibido }}</p>
-<p>Entregado : {{ object.Entregado }}</p>
+<p>Entregado : {{ object.Entregado }}</p> <br>
 
+<a href='../editar/'> Editar encomienda </a> <br>
+<a href='../borrar/'> Borrar Encomienda </a> <br>
 {% endblock %}

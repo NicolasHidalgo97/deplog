@@ -28,7 +28,7 @@ def editar_bitacora_vista(request, id):
     form = BitacoraForm(request.POST or None, instance=obj)
     if form.is_valid():
         form.save()
-        return redirect('../../')
+        return redirect('../detalles/')
     context = {
         'form': form
     }
@@ -38,7 +38,7 @@ def borrar_bitacora_vista(request,id):
     obj = get_object_or_404(bitacora,id=id)
     if request.method == "POST":
         obj.delete()
-        return redirect('../../')
+        return redirect('../../lista/')
     context={
         "object": obj
 
@@ -78,7 +78,7 @@ def editar_encomienda_vista(request, id):
     form = EncomiendaForm(request.POST or None, instance=obj)
     if form.is_valid():
         form.save()
-        return redirect('../../')
+        return redirect('../detalles/')
     context = {
         'form': form
     }
@@ -88,7 +88,7 @@ def borrar_encomienda_vista(request,id):
     obj = get_object_or_404(encomienda,id=id)
     if request.method == "POST":
         obj.delete()
-        return redirect('../../')
+        return redirect('../../lista/')
     context={
         "object": obj
 
