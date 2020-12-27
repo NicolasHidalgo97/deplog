@@ -1,5 +1,9 @@
-{% extends 'botones.html' %}
+{% extends 'layout-staff.html' %}
+{% block title %}
+Bienvenido
+{% endblock %} 
 {% block content %}
+<br><br><br>
 <title>Detalles</title>
 <p>Nombre Empleado : {{ object.Nombre }}</p>
 <p>Numero de Departamento : {{ object.Departamento }}</p>
