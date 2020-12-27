@@ -8,8 +8,6 @@ def home_view(request,*args, **kwargs): #*args, **kwargs
 def inicio(request):
     return render(request, 'inicio.html')
 
-def nosotros(request):
-    return render(request,'nosotros.html')
 
 def servicio(request,redirigir=""):
     

@@ -2,7 +2,46 @@
 
 {% block title %} Servicio {% endblock %}
 
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}"  />
+
 {% block content %}
-<h1>Servicios</h1>
+
+
+<div class="flexbox">
+    <div class="header">
+        <h1>¿QUIÉN ES DEPLOG?</h1>
+    </div>
+    <article class="contenido_servicio">
+        <p>
+            <strong>Deplog</strong>
+            es una empresa que se encarga de la prestacion de servicios relacionado con la administracion de condominios y Edificios Habitacionales.
+            <br/>
+            <br/>
+            Teniendo presente las áreas de operaciones como administrativa. Cubriendo tanto temas operativos y administrativos contables en edificios en que es propietario. 
+            Lo prioritario es contribuir en el aumento del patrimonio de las comunidades, velar por un correcto y controlado ítem de gastos comunes.
+        </p>
+    </article>
+
+    <aside class="aside aside1">
+        <div class="image_aside1"></div>
+        <hr>
+        <p>Entregaremos un servicio personalizado que cumpla las necesidades del Comité de Administración en representación de los residentes del condominio.</p>
+    </aside>
+
+    <aside class="aside aside2">
+        <div class="image_aside2"></div>
+        <hr>
+        <p>brindaremos al Comité y residentes comentarios positivos para la mejora continua de su seguridad, tratando de minimizar los riesgos y vulnerabilidades de su condominio.</p>
+    </aside>
+
+    <div class="footer_servicio">
+        <div class="image_footer"></div>
+        <h1 class="titulo_footer">Plataforma de Administracion Online</h1>
+        <div class="contenido_footer">A traves de la plataforma podra realizar diferentes funciones para su comunidad</div>
+    </div>
+
+</div>
 
 {% endblock %}

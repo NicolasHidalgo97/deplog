@@ -38,10 +38,6 @@ urlpatterns = [
     path('', views.inicio, name="index"),
     path('inicio/', views.inicio, name="inicio"),
     path('servicio/', views.servicio, name="servicio"),
-    path('nosotros/', views.nosotros, name="nosotros"),
-    path('contacto/', views.contacto, name="contacto"),
-    path('contacto/<str:nombre>', views.contacto, name="contacto"),
-    path('contacto/<str:nombre>/<str:apellido>', views.contacto, name="contacto"),
     path('home/', views.home_view , name="home"),
 
     path('bitacora/', crear_bitacora_vista),
