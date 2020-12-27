@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block title %} Index {% endblock %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}"  />
+
+
+
+{% block content %}
+<h1 class="imagen">Administra</h1>
+<h1 class="imagen2">tus propiedades</h1>
+<style>
+  .box{
+      background: url("{% static 'images/Fondo.jpg' %}") no-repeat center center fixed;
+      background-size: cover;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      background-size: cover;
+      height: 100%;
+  }
+</style>
+
+{% endblock %}
+

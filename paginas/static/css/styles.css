@@ -1,0 +1,196 @@
+/* Estilos Generales */
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+/* Estilos Cabecera */
+
+header{
+    width: 100%;
+    height: 70px;
+    background-color: #004a81;
+
+}
+
+#logotipo {
+    width: 19%;
+    height: 56px;
+    margin: 0 auto;
+}
+
+#logotipo h2{
+    display: block;
+    letter-spacing: 2px;
+    font-weight: normal;
+    margin-left: 10px;
+    margin-top: 18px;
+    float: left;
+    color: rgb(248, 248, 248);
+}
+
+#logotipo img{
+    display: block;
+    width: 43px;
+    float: left;
+    margin-top: 6px;
+}
+
+/* Barra de Navegacion */
+
+nav{
+    width: 100%;
+    height: 40px;
+    border: 0px solid #fff;
+    box-shadow: 0px 10px 8px gray;
+    background-color: #fafafa
+}
+
+nav ul{
+    list-style: none;
+    text-decoration: none;
+    margin-left: 730px;
+
+}
+
+nav ul li{
+    line-height: 40px;
+    float: left;
+}
+
+nav ul li a{
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: rgb(95, 95, 95);
+    font-size: 17px;
+}
+
+nav ul li a:hover {
+    background-color: #004a81;
+    box-shadow: 0px 0px 50px #004a81 inset;
+    color: rgb(255, 255, 255);
+    transition: all 1s;
+}
+
+
+/* Estilo Contenido Central */
+
+#content {
+    width: 100%;
+    min-height: 1150px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.box {
+    background-color: white;
+    width: 100%;
+    min-height: 1120px;
+    border: 0 solid #ddd;
+}
+
+
+.tituloc{
+    visibility: inherit;
+}
+
+/* Body */
+
+body {
+    background-color: #eeee;
+}
+
+
+/* Inicio Imagen */
+
+.imagen{
+    position: absolute;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    font-family: Arial;
+    text-shadow: 0px 2px 5px rgba(0,0,0,0.5);
+    font-size: 60px;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.imagen2{
+    position: absolute;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    font-family: Arial;
+    text-shadow: 0px 2px 5px rgba(0,0,0,0.5);
+    font-size: 60px;
+    left: 50%;
+    top: 55%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.footerinho {
+    height: 200px;
+    background-image: url("/static/images/footer.png");
+    background-size: contain;
+}
+
+
+footer{
+    width: 100%;
+    background-color: #004a81;
+    color: white;
+    height: 175px;
+    text-align: center;
+    bottom: 0px;
+    position: relative;
+}
+
+.main_content {
+    display: flex;
+    margin-left: 432px;
+    margin-right: 432px;
+}
+
+.main_content h2{
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.main_content .content {
+    margin: 20px 0 0 0;
+}
+
+
+.left_box {
+    text-align: left;
+    flex-basis: 25%;
+}
+
+.left_box .content {
+    text-align: left;
+    background-size: contain
+}
+
+.center_box {
+    flex-basis: 50%;
+}
+
+.telefono {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.correo {
+    margin-top: 10px;
+}
+
+
+.right_box {
+    flex-basis: 25%;
+}
