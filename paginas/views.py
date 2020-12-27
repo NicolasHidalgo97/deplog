@@ -2,8 +2,11 @@ from django.shortcuts import render, HttpResponse, redirect
 
 # Create your views here.
 def home_view(request,*args, **kwargs): #*args, **kwargs
- 
-    return render(request, "home.html",{})
+ # Si estamos identificados devolvemos la portada
+    if request.user.is_authenticated:
+        return render(request, "home.html",{})
+    # En otro caso redireccionamos al login
+    return redirect('/inicio-sesion')
 
 def inicio(request):
     return render(request, 'inicio.html')

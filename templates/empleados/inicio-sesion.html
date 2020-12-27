@@ -1,0 +1,13 @@
+<div align='center'>
+    <br><br>
+    <h2>Iniciar sesión</h2>
+    <br>
+    
+    <form action="." method="POST">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <button type="submit" class="button">Iniciar Sesion</button>
+    </form>
+    
+    
+</div>
