@@ -6,8 +6,12 @@ class departamento(models.Model):
     Numero       = models.IntegerField() 
     Propietario = models.CharField(max_length=100)
     Residente = models.CharField(max_length=100)
+    def __str__(self):
+        return "%i" % (self.Numero)
     def get_absolute_url(self):
         return reverse("detalles-departamento",kwargs = {"id": self.id})
+
+        
 class bitacora(models.Model):
     Nombre       = models.CharField(max_length=120) 
     Departamento = models.IntegerField()

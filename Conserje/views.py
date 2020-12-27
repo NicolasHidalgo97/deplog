@@ -7,7 +7,9 @@ from .models import bitacora,encomienda,departamento
 def crear_bitacora_vista(request):
     form = BitacoraForm(request.POST or None)
     if form.is_valid():
-        form.save()
+        bitacora = form.save()
+        bitacora.departamento = departamento
+        bitacora.save()
         form = BitacoraForm()
     
     context = {
