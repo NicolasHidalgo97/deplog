@@ -1,0 +1,8 @@
+{% extends 'botones.html' %}
+{% block content %}
+
+{% for instance in object_list %}
+    <p>{{ forloop.counter }}.-  <a href='{{ instance.get_absolute_url }}'> {{ instance.Numero }}</a></p>
+{% endfor %}
+
+{% endblock %}

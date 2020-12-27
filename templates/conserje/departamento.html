@@ -1,0 +1,15 @@
+{% extends 'botones.html' %}
+
+{% block content %}
+<form action='.' method='POST'>{% csrf_token %}
+    {% for field in form %}
+    <div>
+        {{ field.errors }}
+        {{ field.name }} : <br>
+        {{ field }}
+    </div>
+    {% endfor %}
+    <br>
+    <input type='submit' value='Guardar'/>
+</form>
+{% endblock %}

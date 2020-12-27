@@ -1,0 +1,9 @@
+{% block content %}
+
+<form action='.' method='POST'>{% csrf_token %}
+    <h1>¿Estas seguro de borrar este departamento?</h1>
+    <p><input type='submit' value='Si' /> <a href='../detalles/'> Cancelar </a> </p>
+
+</form>
+
+{% endblock %} 

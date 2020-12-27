@@ -2,6 +2,7 @@ from django import forms
 from django.db import models
 from .models import bitacora
 from .models import encomienda
+from .models import departamento
 
 
 class BitacoraForm(forms.ModelForm):
@@ -62,3 +63,16 @@ class EncomiendaForm(forms.ModelForm):
             'Recibido',
             'Entregado',
         ]
+
+class DepartamentoForm(forms.ModelForm):
+    Numero       = forms.IntegerField(widget = forms.TextInput(attrs={"placeholder":"Numero Departamento"}))
+ #   Numero = forms.ModelMultipleChoiceField(queryset=departamento.objects.all())
+    Propietario = forms.CharField(widget=forms.TextInput(attrs={"placeholder":"Nombre Propietario"}))
+    Residente = forms.CharField(widget=forms.TextInput(attrs={"placeholder":"Nombre Residente"}))
+    class Meta:
+        model  = departamento
+        fields = [
+            'Numero',
+            'Propietario',
+            'Residente'
+        ] 

@@ -18,14 +18,19 @@ from django.urls import path
 from paginas.views import home_view
 from Conserje.views import (crear_bitacora_vista,
                             crear_encomienda_vista,
+                            crear_departamento_vista,
                             detalles_bitacora_vista,
                             detalles_encomienda_vista,
+                            detalles_departamento_vista,
                             editar_bitacora_vista,
                             editar_encomienda_vista,
+                            editar_departamento_vista,
                             borrar_bitacora_vista,
                             borrar_encomienda_vista,
+                            borrar_departamento_vista,
                             lista_bitacora_vista,
                             lista_encomienda_vista,
+                            lista_departamento_vista,
                             )
 
 urlpatterns = [
@@ -43,4 +48,10 @@ urlpatterns = [
     path('encomienda/<int:id>/editar/',editar_encomienda_vista),
     path('encomienda/<int:id>/borrar/',borrar_encomienda_vista),
     path('encomienda/lista/',lista_encomienda_vista,name='lista-encomienda'),
+
+    path('departamento/', crear_departamento_vista),
+    path('departamento/<int:id>/detalles/',detalles_departamento_vista,name='detalles-departamento'),
+    path('departamento/<int:id>/editar/',editar_departamento_vista),
+    path('departamento/<int:id>/borrar/',borrar_departamento_vista),
+    path('departamento/lista/',lista_departamento_vista,name='lista-departamento'),
 ]
