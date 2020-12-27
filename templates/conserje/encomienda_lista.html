@@ -1,7 +1,9 @@
-{% extends 'botones.html' %}
-
+{% extends 'layout-staff.html' %}
+{% block title %}
+Bienvenido
+{% endblock %} 
 {% block content %}
-
+<br><br><br>
 {% for instance in object_list %}
     <p>{{ forloop.counter }}.- <a href='{{ instance.get_absolute_url }}'>{{ instance.Fecha }}</a></p>
 {% endfor %}

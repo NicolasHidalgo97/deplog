@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <title>
+        {% block title %}
+        <!--Titutlo de cada pagina-->    
+        {% endblock %}
+        | Deplog
+        </title>
+
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}"  />
+
+
+    </head>
+
+    <body>
+
+        <!--Cabecera de la pagina-->
+        <header>
+            <div id="logotipo"> 
+                <!--Logotipo-->
+                <img src="{% static 'images/logo2.png' %}" />
+                <h2>Sitio Web Deplog</h2>
+            </div> 
+        </header>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="/inicio">Inicio </a>
+                </li>
+                
+                <li>
+                    <a href="/bitacora"> Crear Bitacora</a>
+                </li>
+            
+                <li>
+                    <a href="/bitacora/lista">Lista Bitacoras</a>
+                </li>
+                
+                <li>
+                    <a href="/encomienda">Crear Encomienda </a>
+                </li>
+
+                <li>
+                    <a href="/encomienda/lista"> Lista Encomiendas</a>
+                </li>
+            
+                <li>
+                    <a href="/departamento">Agregar Departamento</a>
+                </li>
+                
+                <li>
+                    <a href="/departamento/lista">Lista Departamentos </a>
+                </li>
+                <li>
+                    <a href="/logout">Cerrar Sesion </a>
+                </li>
+            </ul>
+        </nav>
+        
+
+        <div id="content">
+            <div class="box">
+                {% block content %}
+                <!-- Codigo que viene de template-->
+                {% endblock %}
+            </div>
+        </div>
+
+        <div class="footerinho"></div>
+
+        <footer>
+            <div class="main_content">
+                <div class="left_box">
+                    <h2>Sobre Nosotros</h2>
+                    <div class="content">
+                        <p>Nos encargamos de cubrir temas operativos y administrativos en el edificio del cual es propietario</p>
+                    </div>
+                </div>
+            
+                <div class="center_box">
+                    <h2>Contacto</h2>
+                    <div class="content">
+
+                        <div>Telefono</div>
+
+                        <div class="telefono">
+                            <span>+56934452320</span>
+                        </div>
+
+                        <div>Correo</div>
+
+                        <div class="correo">
+                            <span>contacto@deplog.cl</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right_box">
+                    <h2>Contactanos</h2>
+                    <div class="content">
+                        <form action="#">
+                            <div class="email">
+                                <div class="texto">Email *</div>
+                                <input type="email" required />
+                            </div>
+
+                            <div class="mensaje">
+                                <div class="texto">Mensaje *</div>
+                                <textarea rows="2" cols="25" required></textarea>
+                            </div>
+
+                            <div class="boton">
+                                <button type="submit">Enviar</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+</html>

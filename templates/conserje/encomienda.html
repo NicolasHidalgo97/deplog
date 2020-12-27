@@ -1,5 +1,9 @@
-{% extends 'botones.html' %}
+{% extends 'layout-staff.html' %}
+{% block title %}
+Bienvenido
+{% endblock %} 
 {% block content %}
+<br><br><br>
 <form action='.' method='POST' aling>{% csrf_token %}
     {% for field in form %}
     

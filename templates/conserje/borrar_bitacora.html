@@ -1,4 +1,9 @@
+{% extends 'layout-staff.html' %}
+{% block title %}
+Bienvenido
+{% endblock %} 
 {% block content %}
+<br><br><br>
 
 <form action='.' method='POST'>{% csrf_token %}
     <h1>¿Estas seguro de borrar esta bitacora?</h1>
