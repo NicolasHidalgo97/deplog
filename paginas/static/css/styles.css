@@ -342,6 +342,14 @@ footer{
 /* Nav del staff */
 
 .nav_staff{
-    margin-left: 24%;
+    margin-left: 0%;
+  
 
 }
+
+/* Personalizacion Inicio de Sesion */
+
+.caja_IS {
+    margin-left: 65%;
+}
+
