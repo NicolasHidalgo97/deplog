@@ -32,6 +32,7 @@ from Conserje.views import (crear_bitacora_vista,
                             lista_encomienda_vista,
                             lista_departamento_vista,
                             )
+from Empleados.views import (login, home, logout)
 
 urlpatterns = [
     path('admin/', admin.site.urls),    
@@ -57,4 +58,8 @@ urlpatterns = [
     path('departamento/<int:id>/editar/',editar_departamento_vista),
     path('departamento/<int:id>/borrar/',borrar_departamento_vista),
     path('departamento/lista/',lista_departamento_vista,name='lista-departamento'),
+
+    path('inicio-sesion/',login),
+    path('logout/', logout),
+    
 ]
