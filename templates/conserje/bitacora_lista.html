@@ -4,9 +4,10 @@ Lista Bitacoras
 {% endblock %} 
 {% block content %}
 <br><br><br>
-
+<h3>Empleado | Fecha | Departamento</h3>
+<br>
 {% for instance in object_list %}
-    <p>{{ forloop.counter }}.-  <a href='{{ instance.get_absolute_url }}'> {{ instance.Fecha }}</a></p>
+    <p>{{ forloop.counter }}.- {{ instance.Nombre }} | {{ instance.Fecha }} |{{ instance.Departamento }} |<a href='{{ instance.get_absolute_url }}'> Ver </a></p>
 {% endfor %}
 
 {% endblock %}

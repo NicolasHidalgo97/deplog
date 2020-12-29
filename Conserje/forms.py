@@ -6,10 +6,10 @@ from .models import departamento
 
 
 class BitacoraForm(forms.ModelForm):
-    Nombre       = forms.CharField(widget = forms.TextInput(attrs={"placeholder":"Nombre empleado"}))
+    #Nombre       = forms.CharField(widget = forms.TextInput(attrs={"placeholder":"Nombre empleado"}))
     Departamento = forms.IntegerField(widget=forms.TextInput(attrs={"placeholder":"N° Departamento"}))
-    Fecha        = forms.DateField(widget=forms.DateInput(attrs={"placeholder":"YYYY-MM-DD"}))
-    Hora         = forms.TimeField(widget=forms.TimeInput(attrs={"placeholder":"HH:MM"}))
+    #Fecha        = forms.DateField(widget=forms.DateInput(attrs={"placeholder":"YYYY-MM-DD"}))
+    #Hora         = forms.TimeField(widget=forms.TimeInput(attrs={"placeholder":"HH:MM"}))
     Sumario      = forms.CharField(
                             required=False,
                             widget=forms.Textarea(
@@ -26,18 +26,18 @@ class BitacoraForm(forms.ModelForm):
     class Meta:
         model  = bitacora
         fields = [
-            'Nombre',
+            #'Nombre',
             'Departamento',
-            'Fecha',
-            'Hora',
-            'Sumario'
+            #'Fecha',
+            #'Hora',
+            'Sumario',
         ]  
 
 class EncomiendaForm(forms.ModelForm):
-    Nombre       = forms.CharField(widget=forms.TextInput(attrs={"placeholder":"Nombre empleado"}))
+    #Nombre       = forms.CharField(widget=forms.TextInput(attrs={"placeholder":"Nombre empleado"}))
     Departamento = forms.IntegerField(widget=forms.TextInput(attrs={"placeholder":"N° Departamento"}))
-    Fecha        = forms.DateField(widget=forms.DateInput(attrs={"placeholder":"YYYY-MM-DD"}))
-    Hora         = forms.TimeField(widget=forms.TimeInput(attrs={"placeholder":"HH:MM"}))
+    #Fecha        = forms.DateField(widget=forms.DateInput(attrs={"placeholder":"YYYY-MM-DD"}))
+    #Hora         = forms.TimeField(widget=forms.TimeInput(attrs={"placeholder":"HH:MM"}))
     Sumario      = forms.CharField(
                             required=False,
                             widget=forms.Textarea(
@@ -55,10 +55,10 @@ class EncomiendaForm(forms.ModelForm):
     class Meta:
         model  = encomienda
         fields = [
-            'Nombre',
+            #'Nombre',
             'Departamento',
-            'Fecha',
-            'Hora',
+            #'Fecha',
+            #'Hora',
             'Sumario',
             'Recibido',
             'Entregado',

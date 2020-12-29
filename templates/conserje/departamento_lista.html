@@ -4,7 +4,8 @@ Bienvenido
 {% endblock %} 
 {% block content %}
 <br><br><br>
-
+<h3>Numero Departamento</h3>
+<br>
 {% for instance in object_list %}
     <p>{{ forloop.counter }}.-  <a href='{{ instance.get_absolute_url }}'> {{ instance.Numero }}</a></p>
 {% endfor %}

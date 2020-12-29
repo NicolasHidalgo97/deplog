@@ -5,12 +5,13 @@ from .models import bitacora,encomienda,departamento
 
 # Vistas para Bitacoras.
 def crear_bitacora_vista(request):
+    
     if request.user.is_authenticated == False:
         return redirect("/inicio-sesion")
     form = BitacoraForm(request.POST or None)
     if form.is_valid():
         bitacora = form.save()
-        bitacora.departamento = departamento
+        bitacora.Nombre = request.user.username
         bitacora.save()
         form = BitacoraForm()
     
@@ -71,8 +72,10 @@ def crear_encomienda_vista(request):
         return redirect("/inicio-sesion")
     form = EncomiendaForm(request.POST or None)
     if form.is_valid():
-        form.save()
-        form =EncomiendaForm
+        encomienda = form.save()
+        encomienda.Nombre = request.user.username
+        encomienda.save()
+        form = EncomiendaForm()
 
     context = {
         'form': form

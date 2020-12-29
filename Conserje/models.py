@@ -15,8 +15,8 @@ class departamento(models.Model):
 class bitacora(models.Model):
     Nombre       = models.CharField(max_length=120) 
     Departamento = models.IntegerField()
-    Fecha        = models.DateField()
-    Hora         = models.TimeField()
+    Fecha        = models.DateField(auto_now_add=True,editable=True)
+    Hora         = models.TimeField(auto_now_add=True)
     Sumario      = models.TextField()
     def get_absolute_url(self):
         return reverse("detalles-bitacora",kwargs = {"id": self.id}) 
@@ -25,8 +25,8 @@ class bitacora(models.Model):
 class encomienda(models.Model):
     Nombre                = models.CharField(max_length=120) 
     Departamento          = models.IntegerField()
-    Fecha                 = models.DateField()
-    Hora                  = models.TimeField()
+    Fecha                 = models.DateField(auto_now_add=True)
+    Hora                  = models.TimeField(auto_now_add=True)
     Sumario               = models.TextField()
     Recibido              = models.BooleanField(default=False)
     Entregado             = models.BooleanField(default=False)
