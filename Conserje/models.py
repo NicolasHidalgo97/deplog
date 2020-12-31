@@ -14,7 +14,7 @@ class departamento(models.Model):
         
 class bitacora(models.Model):
     Nombre       = models.CharField(max_length=120) 
-    Departamento = models.IntegerField()
+    Departamento = models.ForeignKey(departamento, on_delete=models.CASCADE)
     Fecha        = models.DateField(auto_now_add=True,editable=True)
     Hora         = models.TimeField(auto_now_add=True)
     Sumario      = models.TextField()
@@ -24,7 +24,7 @@ class bitacora(models.Model):
 
 class encomienda(models.Model):
     Nombre                = models.CharField(max_length=120) 
-    Departamento          = models.IntegerField()
+    Departamento          = models.ForeignKey(departamento, on_delete=models.CASCADE)
     Fecha                 = models.DateField(auto_now_add=True)
     Hora                  = models.TimeField(auto_now_add=True)
     Sumario               = models.TextField()

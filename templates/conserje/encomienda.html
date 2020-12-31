@@ -1,15 +1,17 @@
 {% extends 'layout-staff.html' %}
 {% block title %}
-Bienvenido
+Crear Encomienda
 {% endblock %} 
 {% block content %}
 <br><br><br>
+<h2>Encomienda</h2>
+<br>
 <form action='.' method='POST' aling>{% csrf_token %}
     {% for field in form %}
     
     {% if field.name == 'Recibido' or field.name == 'Entregado' %}
         <div>
-            {{ field.errors }}<br>
+            {{ field.errors }}
             {{ field.name }} :
             {{ field }}
         </div>

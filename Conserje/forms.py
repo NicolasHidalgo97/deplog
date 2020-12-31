@@ -7,7 +7,8 @@ from .models import departamento
 
 class BitacoraForm(forms.ModelForm):
     #Nombre       = forms.CharField(widget = forms.TextInput(attrs={"placeholder":"Nombre empleado"}))
-    Departamento = forms.IntegerField(widget=forms.TextInput(attrs={"placeholder":"N° Departamento"}))
+    #Departamento = forms.ModelMultipleChoiceField(queryset=departamento.objects.all())
+    #Departamento = forms.IntegerField(widget=forms.TextInput(attrs={"placeholder":"N° Departamento"}))
     #Fecha        = forms.DateField(widget=forms.DateInput(attrs={"placeholder":"YYYY-MM-DD"}))
     #Hora         = forms.TimeField(widget=forms.TimeInput(attrs={"placeholder":"HH:MM"}))
     Sumario      = forms.CharField(
@@ -22,9 +23,10 @@ class BitacoraForm(forms.ModelForm):
                                 }
                                 ),
                             )
-    
+   
     class Meta:
         model  = bitacora
+        #exclude = ("Departamento",)
         fields = [
             #'Nombre',
             'Departamento',
@@ -34,10 +36,6 @@ class BitacoraForm(forms.ModelForm):
         ]  
 
 class EncomiendaForm(forms.ModelForm):
-    #Nombre       = forms.CharField(widget=forms.TextInput(attrs={"placeholder":"Nombre empleado"}))
-    Departamento = forms.IntegerField(widget=forms.TextInput(attrs={"placeholder":"N° Departamento"}))
-    #Fecha        = forms.DateField(widget=forms.DateInput(attrs={"placeholder":"YYYY-MM-DD"}))
-    #Hora         = forms.TimeField(widget=forms.TimeInput(attrs={"placeholder":"HH:MM"}))
     Sumario      = forms.CharField(
                             required=False,
                             widget=forms.Textarea(
@@ -66,7 +64,6 @@ class EncomiendaForm(forms.ModelForm):
 
 class DepartamentoForm(forms.ModelForm):
     Numero       = forms.IntegerField(widget = forms.TextInput(attrs={"placeholder":"Numero Departamento"}))
- #   Numero = forms.ModelMultipleChoiceField(queryset=departamento.objects.all())
     Propietario = forms.CharField(widget=forms.TextInput(attrs={"placeholder":"Nombre Propietario"}))
     Residente = forms.CharField(widget=forms.TextInput(attrs={"placeholder":"Nombre Residente"}))
     class Meta:

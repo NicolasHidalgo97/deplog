@@ -4,15 +4,14 @@ from django.contrib.auth import authenticate
 from .models import bitacora,encomienda,departamento
 
 # Vistas para Bitacoras.
-def crear_bitacora_vista(request):
-    
+def crear_bitacora_vista(request):    
     if request.user.is_authenticated == False:
         return redirect("/inicio-sesion")
     form = BitacoraForm(request.POST or None)
     if form.is_valid():
-        bitacora = form.save()
-        bitacora.Nombre = request.user.username
-        bitacora.save()
+        b = form.save(commit=False)
+        b.Nombre = request.user.username
+        b.save()
         form = BitacoraForm()
     
     context = {
@@ -72,7 +71,7 @@ def crear_encomienda_vista(request):
         return redirect("/inicio-sesion")
     form = EncomiendaForm(request.POST or None)
     if form.is_valid():
-        encomienda = form.save()
+        encomienda = form.save(commit=False)
         encomienda.Nombre = request.user.username
         encomienda.save()
         form = EncomiendaForm()

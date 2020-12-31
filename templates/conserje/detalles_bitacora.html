@@ -3,12 +3,16 @@
 Detalles
 {% endblock %} 
 {% block content %}
+
 <br><br><br>
+<h2>Detalles Bitacoras</h2>
+<br>
+
 <p>Nombre empleado    : {{ object.Nombre }}</p>
-<p>Numero Departamento : {{ object.Departamento }}</p>
+<p>Numero Departamento :<a href='/departamento/{{ object.Departamento.id }}/detalles'>  {{ object.Departamento }} </a></p>
 <p>Fecha               : {{ object.Fecha }}</p>
 <p>Hora                : {{ object.Hora }}</p>
-<p>Sumario             : {{ object.Sumario }}</p><br>
+<p>Sumario             :<br> {{ object.Sumario }}</p><br>
 
 <a href='../editar/'> Editar bitacora </a> <br>
 <a href='../borrar/'> Borrar bitacora </a> <br>

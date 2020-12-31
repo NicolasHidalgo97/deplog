@@ -269,6 +269,7 @@ footer{
     }
 }
 
+
 @media all and (min-width: 600px) {
     .aside {
         flex: 1;
