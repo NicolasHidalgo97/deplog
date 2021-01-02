@@ -10,9 +10,17 @@ Detalles
 <p>Numero de Departamento : <a href='/departamento/{{ object.Departamento.id }}/detalles'>  {{ object.Departamento }} </a></p>
 <p>Fecha : {{ object.Fecha }}</p>
 <p>Hora : {{ object.Hora }}</p>
-<p>Sumario : {{ object.Sumario }}</p>
-<p>Recibido : {{ object.Recibido }} </p>
-<p>Entregado : {{ object.Entregado }}</p> <br>
+<p>Sumario : {{ object.Sumario }} </p>
+<p>Recibido : {% if object.Recibido == True %}
+                Si
+              {% else %}
+                No
+              {% endif %} </p>
+<p>Entregado :{% if object.Entregado == True %}
+                Si
+              {% else %}
+                No
+              {% endif %} </p> <br>
 
 <a href='../editar/'> Editar encomienda </a> <br>
 <a href='../borrar/'> Borrar Encomienda </a> <br>

@@ -85,7 +85,6 @@ def detalles_encomienda_vista(request,id):
     if request.user.is_authenticated == False:
         return redirect("/inicio-sesion")
     obj = get_object_or_404(encomienda,id=id)
-
     context={
         "object": obj
     }
